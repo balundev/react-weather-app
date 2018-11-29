@@ -14,11 +14,36 @@
   background-position: center;
   background-repeat: no-repeat; }
 
-.weather-pool {
-  background-image: url(images/weather_pool.jpg);
+.clouds {
+  background-image: url(images/clouds.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 200px;
   animation: fade 8s 0s forwards; }
-  .weather-pool hr {
+  .clouds hr {
+    background-color: white;
+    width: 70%; }
+
+.clear {
+  background-image: url(images/clear.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  animation: fade 8s 0s forwards; }
+  .clear hr {
+    background-color: white;
+    width: 70%; }
+
+.rain {
+  background-image: url(images/rain.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  animation: fade 8s 0s forwards; }
+  .rain hr {
     background-color: white;
     width: 70%; }
 
@@ -34,7 +59,7 @@
   -ms-flex-item-align: right;
       align-self: right; }
 
-.clouds {
+.clouds-info {
   -ms-flex-item-align: end;
       align-self: flex-end; }
 
