@@ -26,16 +26,17 @@ class WeatherSection extends React.Component{
                     </label>
                     <div className="row">
                     {this.props.weather.map((el,i)=>{
+                        let sky = el.weather[0].main.toLowerCase();
                         return (
-                            <div key={i} className="col-md-6 mt-3 mb-4">
-                                <div className="weather-pool text-white">
+                            <div key={i} className="col-md-6 mt-3 mb-4 text-white">
+                                <div className={sky}>
                                     <div className="container">
                                         <h1>{el.name}</h1>
                                         <hr/>
                                         <strong>Pogoda teraz</strong> - dzisiaj godz. {this.props.date}
                                         <h1>{Math.round(el.main.temp)}°C</h1>
                                         <div className="d-flex justify-content-between">
-                                            <p className="clouds">{el.weather[0].description}</p>
+                                            <p className="clouds-info">{el.weather[0].description}</p>
                                             <h4 className="pressure-span"><i className="far fa-arrow-alt-circle-up"></i> {Math.round(el.main.pressure)} hPa</h4>
                                             <h4><i className="fas fa-wind"></i> {Math.round(el.wind.speed)} km/h</h4>
                                         </div>

@@ -20,7 +20,7 @@ class Main extends React.Component{
     };
     handleSearchSubmit=()=>{
         event.preventDefault();
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.search}&appid=414b54642e50f1410434620f210fc6dd`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.search}&appid=414b54642e50f1410434620f210fc6dd`)
             .then(resp => {
                 if (resp.ok) {
                     return resp.json()
@@ -47,11 +47,11 @@ class Main extends React.Component{
         });
         let apiKey;
         if(e === "9"){
-             apiKey = "http://api.openweathermap.org/data/2.5/group?id=3081368,756135,3090048,706075,3091913,3094802,3099434,3090436,3096472&units=metric&appid=414b54642e50f1410434620f210fc6dd";
+             apiKey = "https://api.openweathermap.org/data/2.5/group?id=3081368,756135,3090048,706075,3091913,3094802,3099434,3090436,3096472&units=metric&appid=414b54642e50f1410434620f210fc6dd";
         }else if(e === "4"){
-             apiKey = "http://api.openweathermap.org/data/2.5/group?id=3081368,756135,3090048,706075&units=metric&appid=414b54642e50f1410434620f210fc6dd"
+             apiKey = "https://api.openweathermap.org/data/2.5/group?id=3081368,756135,3090048,706075&units=metric&appid=414b54642e50f1410434620f210fc6dd"
         }else if(e === "1"){
-             apiKey = "http://api.openweathermap.org/data/2.5/group?id=3081368&units=metric&appid=414b54642e50f1410434620f210fc6dd"
+             apiKey = "https://api.openweathermap.org/data/2.5/group?id=3081368&units=metric&appid=414b54642e50f1410434620f210fc6dd"
         }
         fetch(apiKey)
             .then(resp => {
@@ -81,7 +81,7 @@ class Main extends React.Component{
         );
     };
     componentDidMount(){
-        fetch(`http://api.openweathermap.org/data/2.5/group?id=3081368,756135,3090048,706075,3091913,3094802,3099434,3090436,3096472&units=metric&appid=414b54642e50f1410434620f210fc6dd`)
+        fetch(`https://api.openweathermap.org/data/2.5/group?id=3081368,756135,3090048,706075,3091913,3094802,3099434,3090436,3096472&units=metric&appid=414b54642e50f1410434620f210fc6dd`)
             .then(resp => {
                 if (resp.ok) {
                     return resp.json()
@@ -89,7 +89,7 @@ class Main extends React.Component{
                 throw new Error('Connection error!');
             })
             .then(data => {
-                console.log(data);
+                console.log(data.list);
                 let weatherList = data.list;
                 this.setState({
                     weather: weatherList
