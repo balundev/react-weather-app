@@ -14,6 +14,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  .container {
+    color:#444;
+  }
 }
 @mixin background{
   background-size: cover;
@@ -36,6 +39,14 @@
 }
 .rain {
   background-image: url("../img/rain.jpg");
+  @include background;
+}
+.mist {
+  background-image: url("../img/mist.jpg");
+  @include background;
+}
+.snow {
+  background-image: url("../img/snow.jpg");
   @include background;
 }
 @keyframes fade  {

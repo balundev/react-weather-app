@@ -13,6 +13,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
+  .weather-section .container {
+    color: #444; }
 
 .clouds {
   background-image: url(images/clouds.jpg);
@@ -44,6 +46,28 @@
   height: 200px;
   animation: fade 8s 0s forwards; }
   .rain hr {
+    background-color: white;
+    width: 70%; }
+
+.mist {
+  background-image: url(images/mist.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  animation: fade 8s 0s forwards; }
+  .mist hr {
+    background-color: white;
+    width: 70%; }
+
+.snow {
+  background-image: url(images/snow.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  animation: fade 8s 0s forwards; }
+  .snow hr {
     background-color: white;
     width: 70%; }
 
